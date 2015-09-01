@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="UML2">
+  <packagedElement xmi:type="uml:Class" xmi:id="_6uH0oEo_EeWJNN_fjDZknQ" name="Beverage" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Dh9ByEpAEeWJNN_fjDZknQ" name="大雁" clientDependency="_uk15NEpAEeWJNN_fjDZknQ" isAbstract="true">
+    <generalization xmi:id="_rAj6IEpAEeWJNN_fjDZknQ" general="_kvgLwEpAEeWJNN_fjDZknQ"/>
+    <generalization xmi:id="_MQYVAEpBEeWJNN_fjDZknQ" isSubstitutable="false" general="_kvgLwEpAEeWJNN_fjDZknQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kvgLwEpAEeWJNN_fjDZknQ" name="雁群"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_uk15NEpAEeWJNN_fjDZknQ" name="Dependency1" supplier="_kvgLwEpAEeWJNN_fjDZknQ" client="_Dh9ByEpAEeWJNN_fjDZknQ"/>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_du7PgEpBEeWJNN_fjDZknQ" name="A_&lt;大雁>_&lt;雁群>" memberEnd="_du7PgUpBEeWJNN_fjDZknQ _du7PhEpBEeWJNN_fjDZknQ">
+    <ownedEnd xmi:id="_du7PgUpBEeWJNN_fjDZknQ" name="大雁" type="_Dh9ByEpAEeWJNN_fjDZknQ" association="_du7PgEpBEeWJNN_fjDZknQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_du7PgkpBEeWJNN_fjDZknQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_du7Pg0pBEeWJNN_fjDZknQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_du7PhEpBEeWJNN_fjDZknQ" name="雁群" type="_kvgLwEpAEeWJNN_fjDZknQ" association="_du7PgEpBEeWJNN_fjDZknQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_du7PhUpBEeWJNN_fjDZknQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_du7PhkpBEeWJNN_fjDZknQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iX4XoEpBEeWJNN_fjDZknQ" name="A_&lt;大雁>_&lt;雁群>" memberEnd="_iX4XoUpBEeWJNN_fjDZknQ _iX4XpEpBEeWJNN_fjDZknQ">
+    <ownedEnd xmi:id="_iX4XoUpBEeWJNN_fjDZknQ" name="大雁" type="_Dh9ByEpAEeWJNN_fjDZknQ" association="_iX4XoEpBEeWJNN_fjDZknQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iX4XokpBEeWJNN_fjDZknQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iX4Xo0pBEeWJNN_fjDZknQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_iX4XpEpBEeWJNN_fjDZknQ" name="雁群" type="_kvgLwEpAEeWJNN_fjDZknQ" aggregation="shared" association="_iX4XoEpBEeWJNN_fjDZknQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iX4XpUpBEeWJNN_fjDZknQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iX4XpkpBEeWJNN_fjDZknQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
