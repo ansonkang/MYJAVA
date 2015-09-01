@@ -1,16 +1,16 @@
-package Test.Bevarage;
+package Test.Beverage;
 
-public class Mocha extends CondimentDecarator {
-	Bevarage b;
+public class Mocha extends Beverage {
+	Beverage b;
 
-	public Mocha(Bevarage b) {
+	public Mocha(Beverage b) {
 		this.b = b;
 	}
 
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return b.getDescription() + "+MOCHA";
+		return b.getDescription() + ",Milk";
 	}
 
 	@Override
