@@ -3,41 +3,56 @@ package Test.Command;
 public class RemoteControl {
 	InterCommand[] onCommands;
 	InterCommand[] offCommands;
+	InterCommand noCommand = new NoCommand();
+	InterCommand unDo;
 
 	public RemoteControl() {
 		onCommands = new InterCommand[7];
 		offCommands = new InterCommand[7];
-		InterCommand c = new NoCommand();
 		for (int i = 0; i < 7; i++) {
-			onCommands[i] = c;
-			offCommands[i] = c;
+			onCommands[i] = noCommand;
+			offCommands[i] = noCommand;
 		}
 	}
 
-	public void setCommand(int i, InterCommand onCommand,
-			InterCommand offCommand) {
+	public void set(int i, InterCommand onCommand, InterCommand offCommand) {
 		onCommands[i] = onCommand;
 		offCommands[i] = offCommand;
 	}
 
-	public void onBtn(int i) {
+	public void on(int i) {
 		onCommands[i].execute();
+		unDo = onCommands[i];
 	}
 
-	public void offBtn(int i) {
+	public void off(int i) {
 		offCommands[i].execute();
+		unDo = offCommands[i];
 	}
 
-	@Override
-	public String toString() {
-		StringBuffer s = new StringBuffer();
-		s.append("\n RemoteControl \n");
-		for (int i = 0; i < onCommands.length; i++) {
-			s.append("[" + i + "] onCommands: "
-					+ onCommands[i].getClass().getName() + "  "
-					+ "offCommands: " + offCommands[i].getClass().getName()
-					+ "\n");
+	public void getString() {
+		for (int i = 0; i < 7; i++) {
+			System.out.println("[" + i + "]: "
+					+ onCommands[i].getClass().getName() + " "
+					+ offCommands[i].getClass().getName());
 		}
-		return s.toString();
+	}
+
+	public void doAll() {
+		for (int i = 0; i < 7; i++) {
+			onCommands[i].execute();
+		}
+	}
+
+	public void CloseAll() {
+		for (int i = 0; i < 7; i++) {
+			offCommands[i].execute();
+		}
+	}
+
+	public void undo() {
+		// TODO Auto-generated method stub
+		unDo.undo();
+
 	}
 }

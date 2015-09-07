@@ -1,6 +1,6 @@
 package Test.Command;
 
-public class NoCommand implements InterCommand {
+public class UnDoCommand implements InterCommand {
 
 	@Override
 	public void execute() {
