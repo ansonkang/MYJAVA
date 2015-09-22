@@ -3,20 +3,22 @@
  */
 package Test.Duck1;
 
-import myUtil.Print;
 
 /**
  * @author Administrator
  *
  */
-public class FlyNoWay implements FlyBehavior{
+public class FlyNoWay implements FlyBehavior {
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see Test.Duck1.FlyBehavior#fly()
 	 */
+	@Override
 	public void fly() {
-		Print.println("CAN'T FLY!!");
-		
+		System.out.println("CAN'T FLY!!");
+
 	}
 
 }

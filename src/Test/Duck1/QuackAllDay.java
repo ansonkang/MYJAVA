@@ -3,20 +3,22 @@
  */
 package Test.Duck1;
 
-import myUtil.Print;
 
 /**
  * @author Administrator
  *
  */
-public class QuackAllDay implements QuackBehavior{
+public class QuackAllDay implements QuackBehavior {
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see Test.Duck1.QuackBehavior#quack()
 	 */
+	@Override
 	public void quack() {
 		// TODO Auto-generated method stub
-		Print.println("quack!qucak all day!1");
+		System.out.println("quack!qucak all day!1");
 	}
 
 }
